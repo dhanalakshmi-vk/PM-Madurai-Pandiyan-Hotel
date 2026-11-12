@@ -22,9 +22,15 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('restaurant.urls')),
+
+    # Website Pages
     path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
     path('menu/', views.menu, name='menu'),
+    path('gallery/', views.gallery, name='gallery'),
+
+    # REST API
+    path('api/', include('restaurant.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,1602 @@
+
+/* ==================================
+   GENERAL SETTINGS
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #F8F3E9;
+    color: #25212A;
+}
+
+/* ==================================
+   ROYAL HEADER
+================================== */
+
+header {
+    background: linear-gradient(135deg, #4b0715, #781629, #4b0715);
+    color: #f5d58a;
+    padding: 25px 15px 30px;
+    text-align: center;
+    border-bottom: 4px solid #C9A45C;
+    position: relative;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #f5d58a;
+}
+
+header p {
+    font-family: Georgia, serif;
+    color: #fff5e5;
+    font-size: 19px;
+    font-style: italic;
+    display: table;
+    margin: 0 auto;
+    padding: 0 35px 12px;
+    border-bottom: 3px solid #c9a45c;
+    position: relative;
+}
+
+header p::after {
+    content: "✦";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f5d58a;
+    background: #681c35;
+    padding: 0 12px;
+    font-size: 18px;
+}
+
+/* ==================================
+   HOTEL LOGO
+================================== */
+
+.hotel-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+/* ==================================
+   NAVIGATION BAR
+================================== */
+
+nav {
+    background-color: #fff3dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-bottom: 3px solid #c9a45c;
+    gap: 10px;
+}
+
+nav a {
+    color: #681c35;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 22px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #681c35;
+    color: white;
+    border-radius: 6px;
+}
+
+/* ==================================
+   COMMON SECTION DESIGN
+================================== */
+
+section {
+    padding: 45px 25px;
+    text-align: center;
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    color: #681018;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+}
+
+#home h2::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #C9A45C;
+    display: inline-block;
+}
+
+#home h2::before {
+    display: none;
+}
+
+section p {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.7;
+    color: #3b1717;
+}
+
+/* Mobile Design */
+
+@media (max-width: 600px) {
+    section h2 {
+        font-size: 27px;
+        gap: 10px;
+    }
+}
+
+/* ==================================
+   HOME PAGE BANNER
+================================== */
+
+.hero {
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ==================================
+   FOOD MENU
+================================== */
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.food-card {
+    background-color: #fffaf0;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid #e4c88b;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.food-card h3 {
+    color: #681c35;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.food-card p {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* ==================================
+   ACCORDION FOOD CATEGORY
+================================== */
+
+.category-card {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    border: 2px solid #c9a45c;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.category-card summary {
+    background: linear-gradient(135deg, #4b0715, #781629);
+    padding: 22px;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff5e5;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.category-card[open] summary {
+    background: linear-gradient(135deg, #4b0715, #781629);
+    color: #f5d58a;
+}
+
+.category-card .arrow {
+    transition: transform 0.3s ease;
+}
+
+.category-card[open] .arrow {
+    transform: rotate(180deg);
+}
+
+.category-card .food-container {
+    padding: 20px;
+}
+
+/* ==================================
+   FOOD IMAGE
+================================== */
+
+.food-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* ==================================
+   FOOD GALLERY
+================================== */
+
+.gallery {
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto 40px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item h3 {
+    color: #681c35;
+    font-size: 18px;
+    padding: 15px;
+}
+
+/* ==================================
+   FOOTER
+================================== */
+
+footer {
+    background: linear-gradient(135deg, #4b0715, #29100b);
+    color: #f5d58a;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #c9a45c;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+/* ==================================
+   TABLET RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
+
+/* ==================================
+   MOBILE RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 10px 30px;
+    }
+
+    header h1 {
+        font-size: 25px;
+        padding: 0 35px;
+    }
+
+    header p {
+        font-size: 13px;
+        padding: 0 5px 12px;
+    }
+
+    .hotel-logo {
+        width: 45px;
+        height: 45px;
+        top: 5px;
+        right: 5px;
+    }
+
+    nav {
+        padding: 10px 5px;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .category-card {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .category-card summary {
+        padding: 18px;
+        font-size: 18px;
+    }
+
+    .category-card .food-container {
+        padding: 12px;
+    }
+
+    .food-card {
+        width: 100%;
+    }
+
+    .gallery {
+        width: 94%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+/* ==================================
+   HEADER IMAGE
+================================== */
+
+.site-header {
+    width: 100%;
+    height: 220px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #680000;
+}
+
+.site-header img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    max-width: none;
+    margin: 0;
+    object-fit: fill;
+}
+
+/* ==================================
+   OUR DINING AREAS
+================================== */
+
+.dining-section {
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.dining-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.dining-card {
+    background: #fffaf0;
+    border: 2px solid #c9a45c;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.dining-card h3 {
+    color: #681c35;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.dining-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Dining Areas Mobile */
+
+@media (max-width: 900px) {
+    .dining-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dining-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================================
+   BIRYANI BACKGROUND IMAGE
+================================== */
+
+.category-card .food-container.biryani-menu-bg {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 35px;
+    min-height: 350px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/biryani_bg.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ==================================
+   ROYAL DECORATIVE BIRYANI LABELS
+================================== */
+
+
+.category-card .food-container.biryani-menu-bg {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+    padding: 25px 35px;
+
+    height: 220px;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: start;
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Decorative Gold Label */
+
+.category-card .biryani-menu-bg .food-card {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 280px;
+    min-height: 85px;
+    margin: auto;
+    padding: 15px 12px;
+
+    background: #d99b22;
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
+}
+
+/* Inner Cream Background */
+
+.category-card .biryani-menu-bg .food-card::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    z-index: -1;
+
+    background: linear-gradient(
+        135deg,
+        #fff0bd,
+        #fff9e8,
+        #ffe5a0
+    );
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+}
+
+/* Food Name */
+
+.category-card .biryani-menu-bg .food-card h3 {
+    color: #681018;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Food Price */
+
+.category-card .biryani-menu-bg .food-card p {
+    color: #681018;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+@media (max-width: 600px) {
+    .category-card .food-container.biryani-menu-bg {
+        grid-template-columns: 1fr;
+        padding: 15px 12px;
+        gap: 15px;
+
+        height: 390px;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .category-card .biryani-menu-bg .food-card {
+        max-width: 280px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==================================
+   TANDOORI MENU BACKGROUND
+================================== */
+
+.category-card .food-container.tandoori-menu-bg {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+    padding: 35px;
+    min-height: 350px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/tandoori_bg.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* TANDOORI DECORATIVE LABELS */
+
+.category-card .tandoori-menu-bg .food-card {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 280px;
+    min-height: 85px;
+    margin: auto;
+    padding: 15px 12px;
+
+    background: #d99b22;
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
+}
+
+/* INNER CREAM LABEL */
+
+.category-card .tandoori-menu-bg .food-card::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    z-index: -1;
+
+    background: linear-gradient(
+        135deg, #fff0bd, #fff9e8, #ffe5a0
+    );
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+}
+
+/* FOOD NAME */
+
+.category-card .tandoori-menu-bg .food-card h3 {
+    color: #681018;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* FOOD PRICE */
+
+.category-card .tandoori-menu-bg .food-card p {
+    color: #681018;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+    .category-card .food-container.tandoori-menu-bg {
+        grid-template-columns: 1fr;
+        padding: 20px 12px;
+        gap: 15px;
+    }
+
+    .category-card .tandoori-menu-bg .food-card {
+        max-width: 280px;
+    }
+}
+
+
+
+
+
+/* ==================================
+   NON VEG STARTERS BACKGROUND
+================================== */
+
+.category-card .food-container.nonveg-starters-bg {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+    padding: 35px;
+    min-height: 350px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/nonveg_starters_bg.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* DECORATIVE GOLD LABEL */
+
+.category-card .nonveg-starters-bg .food-card {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 280px;
+    min-height: 85px;
+    margin: auto;
+    padding: 15px 12px;
+
+    background: #d99b22;
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
+}
+
+/* INNER CREAM LABEL */
+
+.category-card .nonveg-starters-bg .food-card::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    z-index: -1;
+
+    background: linear-gradient(
+        135deg, #fff0bd, #fff9e8, #ffe5a0
+    );
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+}
+
+/* FOOD NAME */
+
+.category-card .nonveg-starters-bg .food-card h3 {
+    color: #681018;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* FOOD PRICE */
+
+.category-card .nonveg-starters-bg .food-card p {
+    color: #681018;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+    .category-card .food-container.nonveg-starters-bg {
+        grid-template-columns: 1fr;
+        padding: 20px 12px;
+        gap: 15px;
+    }
+
+    .category-card .nonveg-starters-bg .food-card {
+        max-width: 280px;
+    }
+}
+
+
+
+
+
+/* ==================================
+   VEG STARTERS BACKGROUND
+================================== */
+
+.category-card .food-container.veg-starters-bg {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+    padding: 35px;
+    min-height: 350px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/veg_starters_bg.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* DECORATIVE GOLD LABEL */
+
+.category-card .veg-starters-bg .food-card {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 280px;
+    min-height: 85px;
+    margin: auto;
+    padding: 15px 12px;
+
+    background: #d99b22;
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
+}
+
+/* INNER CREAM LABEL */
+
+.category-card .veg-starters-bg .food-card::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    z-index: -1;
+
+    background: linear-gradient(
+        135deg, #fff0bd, #fff9e8, #ffe5a0
+    );
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+}
+
+/* FOOD NAME */
+
+.category-card .veg-starters-bg .food-card h3 {
+    color: #681018;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* FOOD PRICE */
+
+.category-card .veg-starters-bg .food-card p {
+    color: #681018;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+    .category-card .food-container.veg-starters-bg {
+        grid-template-columns: 1fr;
+        padding: 20px 12px;
+        gap: 15px;
+    }
+
+    .category-card .veg-starters-bg .food-card {
+        max-width: 280px;
+    }
+}
+
+
+/* ==================================
+   COMMON CATEGORY DESIGN
+================================== */
+
+.category-card .food-container.omelette-menu-bg,
+.category-card .food-container.tiffen-menu-bg,
+.category-card .food-container.bucket-biryani-bg,
+.category-card .food-container.parotta-menu-bg,
+.category-card .food-container.chettinadu-menu-bg,
+.category-card .food-container.veg-rice-bg,
+.category-card .food-container.nonveg-rice-bg {
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+    padding: 35px;
+    min-height: 350px;
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ==================================
+   INDIVIDUAL BACKGROUND IMAGES
+================================== */
+
+.category-card .food-container.omelette-menu-bg {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/omelette_bg.jpeg");
+}
+
+.category-card .food-container.tiffen-menu-bg {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/tiffen_bg.jpeg");
+}
+
+.category-card .food-container.bucket-biryani-bg {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/bucket_biryani_bg.jpeg");
+}
+
+.category-card .food-container.parotta-menu-bg {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/parotta_bg.png");
+}
+
+.category-card .food-container.chettinadu-menu-bg {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/chettinadu_bg.png");
+}
+
+.category-card .food-container.veg-rice-bg {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/veg_rice_bg.png");
+}
+
+.category-card .food-container.nonveg-rice-bg {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/nonveg_rice_bg.png");
+}
+
+/* ==================================
+   GOLD DECORATIVE FOOD LABEL
+================================== */
+
+.category-card .food-container.omelette-menu-bg .food-card,
+.category-card .food-container.tiffen-menu-bg .food-card,
+.category-card .food-container.bucket-biryani-bg .food-card,
+.category-card .food-container.parotta-menu-bg .food-card,
+.category-card .food-container.chettinadu-menu-bg .food-card,
+.category-card .food-container.veg-rice-bg .food-card,
+.category-card .food-container.nonveg-rice-bg .food-card {
+
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 280px;
+    min-height: 85px;
+    margin: auto;
+    padding: 15px 12px;
+
+    background: #d99b22;
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
+}
+
+/* INNER CREAM LABEL */
+
+.category-card .food-container.omelette-menu-bg .food-card::before,
+.category-card .food-container.tiffen-menu-bg .food-card::before,
+.category-card .food-container.bucket-biryani-bg .food-card::before,
+.category-card .food-container.parotta-menu-bg .food-card::before,
+.category-card .food-container.chettinadu-menu-bg .food-card::before,
+.category-card .food-container.veg-rice-bg .food-card::before,
+.category-card .food-container.nonveg-rice-bg .food-card::before {
+
+    content: "";
+    position: absolute;
+    inset: 4px;
+    z-index: -1;
+
+    background: linear-gradient(
+        135deg, #fff0bd, #fff9e8, #ffe5a0
+    );
+
+    clip-path: polygon(
+        5% 0, 95% 0,
+        98% 12%, 100% 25%,
+        98% 38%, 98% 62%,
+        100% 75%, 98% 88%,
+        95% 100%, 5% 100%,
+        2% 88%, 0 75%,
+        2% 62%, 2% 38%,
+        0 25%, 2% 12%
+    );
+}
+
+/* FOOD NAME */
+
+.category-card .food-container.omelette-menu-bg .food-card h3,
+.category-card .food-container.tiffen-menu-bg .food-card h3,
+.category-card .food-container.bucket-biryani-bg .food-card h3,
+.category-card .food-container.parotta-menu-bg .food-card h3,
+.category-card .food-container.chettinadu-menu-bg .food-card h3,
+.category-card .food-container.veg-rice-bg .food-card h3,
+.category-card .food-container.nonveg-rice-bg .food-card h3 {
+
+    color: #681018;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* FOOD PRICE */
+
+.category-card .food-container.omelette-menu-bg .food-card p,
+.category-card .food-container.tiffen-menu-bg .food-card p,
+.category-card .food-container.bucket-biryani-bg .food-card p,
+.category-card .food-container.parotta-menu-bg .food-card p,
+.category-card .food-container.chettinadu-menu-bg .food-card p,
+.category-card .food-container.veg-rice-bg .food-card p,
+.category-card .food-container.nonveg-rice-bg .food-card p {
+
+    color: #681018;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+
+    .category-card .food-container.omelette-menu-bg,
+    .category-card .food-container.tiffen-menu-bg,
+    .category-card .food-container.bucket-biryani-bg,
+    .category-card .food-container.parotta-menu-bg,
+    .category-card .food-container.chettinadu-menu-bg,
+    .category-card .food-container.veg-rice-bg,
+    .category-card .food-container.nonveg-rice-bg {
+
+        grid-template-columns: 1fr;
+        padding: 20px 12px;
+        gap: 15px;
+    }
+
+    .category-card .food-container.omelette-menu-bg .food-card,
+    .category-card .food-container.tiffen-menu-bg .food-card,
+    .category-card .food-container.bucket-biryani-bg .food-card,
+    .category-card .food-container.parotta-menu-bg .food-card,
+    .category-card .food-container.chettinadu-menu-bg .food-card,
+    .category-card .food-container.veg-rice-bg .food-card,
+    .category-card .food-container.nonveg-rice-bg .food-card {
+
+        max-width: 280px;
+    }
+}
+
+
+
+
+
+/* ==================================
+   RESTAURANT LOCATION
+================================== */
+
+.location-section {
+    padding: 45px 25px;
+    text-align: center;
+    background: #fffaf2;
+}
+
+.location-section h2 {
+    color: #681c35;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.location-section p {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.map-container {
+    max-width: 1000px;
+    margin: auto;
+    border: 4px solid #c9a45c;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 28px;
+    background: #681c35;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #c9a45c;
+    color: #25212a;
+}
+
+
+
+/* ==================================
+   FLOATING WHATSAPP LOGO
+================================== */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    background: #25D366;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+
+.whatsapp-icon {
+    width: 38px;
+    height: 38px;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-icon {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+
+
+
+/* ==================================
+   SCROLLABLE FOOD CATEGORIES
+================================== */
+
+.category-card .food-container.tandoori-menu-bg,
+.category-card .food-container.nonveg-starters-bg,
+.category-card .food-container.veg-starters-bg,
+.category-card .food-container.omelette-menu-bg,
+.category-card .food-container.tiffen-menu-bg,
+.category-card .food-container.bucket-biryani-bg,
+.category-card .food-container.parotta-menu-bg,
+.category-card .food-container.chettinadu-menu-bg,
+.category-card .food-container.veg-rice-bg,
+.category-card .food-container.nonveg-rice-bg {
+    height: 220px;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: start;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+    .category-card .food-container.tandoori-menu-bg,
+    .category-card .food-container.nonveg-starters-bg,
+    .category-card .food-container.veg-starters-bg,
+    .category-card .food-container.omelette-menu-bg,
+    .category-card .food-container.tiffen-menu-bg,
+    .category-card .food-container.bucket-biryani-bg,
+    .category-card .food-container.parotta-menu-bg,
+    .category-card .food-container.chettinadu-menu-bg,
+    .category-card .food-container.veg-rice-bg,
+    .category-card .food-container.nonveg-rice-bg {
+        height: 390px;
+        min-height: 0;
+        overflow-y: auto;
+    }
+}
+
+
+
+/* ==================================
+   SELECTED FOOD CATEGORY DESIGN
+================================== */
+
+.selected-category-heading {
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* BACK TO FOOD GALLERY BUTTON */
+
+.back-gallery-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #681c35, #8b2948);
+    color: #F8F3E9;
+    border: 1px solid #C9A45C;
+    padding: 13px 26px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 10px 0 25px;
+    box-shadow: 0 4px 12px rgba(104, 28, 53, 0.20);
+    transition: all 0.3s ease;
+}
+
+.back-gallery-btn:hover {
+    background: #25212A;
+    color: #C9A45C;
+    transform: translateX(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+.back-gallery-btn:hover {
+    background-color: #25212A;
+}
+
+.selected-food-grid {
+    max-width: 1000px;
+    margin: 20px auto 50px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    background-color: #F8F3E9;
+    border-radius: 12px;
+}
+
+.selected-food-card {
+    background: white;
+    border: 1px solid #C9A45C;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.selected-food-card h3 {
+    color: #681C35;
+    font-size: 16px;
+    margin: 0;
+}
+
+.selected-food-card p {
+    color: #25212A;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.gallery-item {
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    .selected-food-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 12px;
+        margin: 15px;
+    }
+
+    .selected-food-card {
+        padding: 16px;
+    }
+}
+
+
+
+
+/* =================================
+   FOOD GALLERY - LAPTOP VIEW
+================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+}
+
+/* =================================
+   FOOD GALLERY - MOBILE VIEW
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+}
+
+
+
+/* LAPTOP - SHOW 6 FOOD ITEMS */
+@media screen and (min-width: 901px) {
+
+    .category-card .food-container.biryani-menu-bg,
+    .category-card .food-container.tandoori-menu-bg,
+    .category-card .food-container.nonveg-starters-bg,
+    .category-card .food-container.veg-starters-bg,
+    .category-card .food-container.omelette-menu-bg,
+    .category-card .food-container.tiffen-menu-bg,
+    .category-card .food-container.bucket-biryani-bg,
+    .category-card .food-container.parotta-menu-bg,
+    .category-card .food-container.chettinadu-menu-bg,
+    .category-card .food-container.veg-rice-bg,
+    .category-card .food-container.nonveg-rice-bg {
+        height: 370px;
+    }
+
+}
+
+
+
+/* FOOD GALLERY - MOBILE SINGLE COLUMN */
+@media screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+
+/* ==================================
+   BULK ORDERS & PARTY CELEBRATIONS
+================================== */
+
+.event-services {
+    padding: 55px 25px;
+    background: #fffaf2;
+    text-align: center;
+}
+
+.event-services h2 {
+    color: #681c35;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.event-intro {
+    color: #3b1717;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 30px auto 0;
+}
+
+.event-card {
+    background: #fff;
+    padding: 30px 22px;
+    border: 2px solid #c9a45c;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+}
+
+.event-icon {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.event-card h3 {
+    color: #681c35;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    color: #3b1717;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.7;
+    min-height: 110px;
+}
+
+.event-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 20px;
+    background: #681c35;
+    color: #fffaf2;
+    text-decoration: none;
+    border: 1px solid #c9a45c;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.event-button:hover {
+    background: #c9a45c;
+    color: #25212a;
+}
+
+/* TABLET VIEW */
+
+@media (max-width: 900px) {
+    .event-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+
+    .event-services {
+        padding: 35px 15px;
+    }
+
+    .event-services h2 {
+        font-size: 25px;
+    }
+
+    .event-intro {
+        font-size: 16px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-card {
+        padding: 25px 18px;
+    }
+
+    .event-card p {
+        min-height: auto;
+    }
+}

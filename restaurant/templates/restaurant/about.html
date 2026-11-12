@@ -1,0 +1,95 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PM Madurai Pandiyan Hotel</title>
+    <link rel="stylesheet" href="{% static 'restaurant/style.css' %}">
+</head>
+<body>
+
+    <header class="site-header">
+    <img src="{% static 'restaurant/images/hotel_header.png' %}"
+         alt="PM Madurai Pandiyan Hotel">
+</header>
+
+    <nav>
+    <a href="{% url 'home' %}">Home</a>
+
+    <a href="{% url 'about' %}">About Us</a>
+
+    <a href="{% url 'gallery' %}">Food Gallery</a>
+
+    <a href="{% url 'home' %}#contact">Contact</a>
+</nav>
+
+    <section>
+        <h2>About Our Hotel</h2>
+        <p>
+            Welcome to PM Madurai Pandiyan Hotel.
+            We are dedicated to serving delicious vegetarian
+            and non-vegetarian food with authentic traditional taste.
+        </p>
+    </section>
+
+    <section>
+        <h2>Our Speciality</h2>
+        <p>
+            We offer a variety of traditional South Indian dishes,
+            tasty biryani, tandoori items and many delicious foods.
+        </p>
+    </section>
+
+
+    <!-- OUR DINING AREAS -->
+
+<section class="dining-section">
+
+    <h2>Our Dining Areas</h2>
+
+    <p>Choose your comfortable dining space at our hotel.</p>
+
+    <div class="dining-container">
+
+        <div class="dining-card">
+            <h3>AC Dining</h3>
+            <img src="{% static 'restaurant/images/ac_dining_1.jpeg' %}" alt="AC Dining 1">
+            <img src="{% static 'restaurant/images/ac_dining_2.jpeg' %}" alt="AC Dining 2">
+        </div>
+
+        <div class="dining-card">
+            <h3>Garden Dining</h3>
+            <img src="{% static 'restaurant/images/garden_dining_1.jpeg' %}" alt="Garden Dining 1">
+            <img src="{% static 'restaurant/images/garden_dining_2.jpeg' %}" alt="Garden Dining 2">
+        </div>
+
+        <div class="dining-card">
+            <h3>Roof Top Dining</h3>
+            <img src="{% static 'restaurant/images/rooftop_dining_1.jpeg' %}" alt="Roof Top Dining">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    <section>
+        <h2>Why Choose US</h2>
+        <p>
+            We use quality ingredients to prepare delicious food.
+        We offer a wide variety of vegetarian and non-vegetarian
+        dishes with authentic traditional taste.
+        Customer satisfaction and food quality are our priorities.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 PM Madurai Pandiyan Hotel</p>
+    </footer>
+
+</body>
+</html>

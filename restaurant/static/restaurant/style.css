@@ -1377,39 +1377,102 @@ footer p {
 }
 
 /* ==================================
-   MOBILE TOUCH IMAGE EFFECT
+   MOBILE TOUCH SUPPORT - ALL HOVER EFFECTS
 ================================== */
 
 @media (hover: none) and (pointer: coarse) {
 
-    /* ABOUT US DINING IMAGE TOUCH */
+    /* NAVIGATION */
+    nav a {
+        transition: 0.3s ease;
+    }
 
-    .dining-section .dining-card img {
+    nav a:active {
+        background-color: #681c35;
+        color: white;
+        border-radius: 6px;
+    }
+
+    /* FOOD CARDS */
+    .food-card {
+        transition: 0.3s ease;
+    }
+
+    .food-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    /* CATEGORY CARDS */
+    .category-card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .dining-section .dining-card img:active {
-        transform: scale(1.06);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    .category-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    /* FOOD GALLERY TOUCH */
-
+    /* FOOD GALLERY */
     .gallery-item {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery-item:active {
-        transform: scale(0.97);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
     .gallery-item img {
-        transition: transform 0.3s ease;
+        transition: transform 0.4s ease;
     }
 
     .gallery-item:active img {
         transform: scale(1.08);
     }
 
+    /* DINING AREA IMAGES */
+    .dining-section .dining-card img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .dining-section .dining-card img:active {
+        transform: scale(1.08);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    /* MAP BUTTON */
+    .map-button:active {
+        background: #c9a45c;
+        color: #25212a;
+    }
+
+    /* BACK TO GALLERY BUTTON */
+    .back-gallery-btn:active {
+        background: #25212A;
+        color: #C9A45C;
+        transform: translateX(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+    }
+
+    /* EVENT CARDS */
+    .event-card {
+        transition: 0.3s ease;
+    }
+
+    .event-card:active {
+        transform: translateY(-7px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+    }
+
+    /* EVENT BUTTON */
+    .event-button:active {
+        background: #c9a45c;
+        color: #25212a;
+    }
+
+    /* FLOATING WHATSAPP */
+    .floating-whatsapp:active {
+        transform: scale(1.12);
+    }
 }

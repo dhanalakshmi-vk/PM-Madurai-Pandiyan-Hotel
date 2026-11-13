@@ -60,14 +60,16 @@
             and celebrations at PM Madurai Pandiyan Hotel.
         </p>
 
-
         <div class="event-container">
-
 
             <!-- BULK FOOD ORDERS -->
             <div class="event-card">
 
-                <div class="event-icon">🍽️</div>
+                <div class="event-icon">
+                    <img src="{% static 'restaurant/images/food_emoji.webp' %}"
+                         alt="Food"
+                         class="event-emoji-image">
+                </div>
 
                 <h3>Bulk Food Orders</h3>
 
@@ -76,13 +78,11 @@
                     We accept bulk food orders for your celebrations.
                 </p>
 
-                <a href="https://wa.me/918925736654?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20food%20orders."
+                <a href="https://wa.me/918925736654?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20food%20orders"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="event-button">
-
                     Enquire on WhatsApp
-
                 </a>
 
             </div>
@@ -91,7 +91,11 @@
             <!-- BIRTHDAY & FAMILY PARTIES -->
             <div class="event-card">
 
-                <div class="event-icon">🎂</div>
+                <div class="event-icon">
+                    <img src="{% static 'restaurant/images/cake_emoji.webp' %}"
+                         alt="Birthday Cake"
+                         class="event-image">
+                </div>
 
                 <h3>Birthday & Family Parties</h3>
 
@@ -100,13 +104,11 @@
                     with your loved ones in our available party area.
                 </p>
 
-                <a href="https://wa.me/918925736654?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20birthday%20or%20family%20party."
+                <a href="https://wa.me/918925736654?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20birthday%20or%20family%20party"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="event-button">
-
                     Enquire on WhatsApp
-
                 </a>
 
             </div>
@@ -115,7 +117,11 @@
             <!-- OFFICE & GROUP PARTIES -->
             <div class="event-card">
 
-                <div class="event-icon">🎉</div>
+                <div class="event-icon">
+                    <img src="{% static 'restaurant/images/celebration_emoji.webp' %}"
+                         alt="Celebration"
+                         class="event-image">
+                </div>
 
                 <h3>Office & Group Parties</h3>
 
@@ -124,17 +130,14 @@
                     get-togethers in our available party area.
                 </p>
 
-                <a href="https://wa.me/918925736654?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20an%20office%20or%20group%20party."
+                <a href="https://wa.me/918925736654?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20an%20office%20or%20group%20party"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="event-button">
-
                     Enquire on WhatsApp
-
                 </a>
 
             </div>
-
 
         </div>
 
@@ -181,18 +184,14 @@
 
             </div>
 
-
             <a href="https://www.google.com/maps/search/?api=1&query=R123%2F2%2C%209th%20Main%20Road%20TNHB%2C%20Annanur%2C%20Ayappakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600077"
                target="_blank"
                rel="noopener noreferrer"
                class="map-button">
-
                 Get Directions
-
             </a>
 
         </div>
-
 
         <p>We are happy to serve you!</p>
 
@@ -201,9 +200,7 @@
 
     <!-- FOOTER -->
     <footer>
-
         <p>© 2026 PM Madurai Pandiyan Hotel</p>
-
     </footer>
 
 
@@ -215,12 +212,83 @@
 
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
 
-            <path fill="white" d="M16 .5A15.3 15.3 0 0 0 2.8 23.6L1 31l7.6-1.9A15.5 15.5 0 1 0 16 .5zm0 27.8c-2.4 0-4.7-.7-6.7-2l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.5 12.5 0 1 1 16 28.3zm6.9-9.4c-.4-.2-2.1-1-2.5-1.1-.3-.1-.6-.2-.8.2-.3.4-.9 1.1-1.1 1.3-.2.3-.4.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.1-2-2.5-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.8c.2.2 2.6 4 6.3 5.5.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.4-.3-.8-.5z"/>
+            <path fill="white" d="M16 .5A15.3 15.3 0 0 0 2.8 23.6L1 31l7.6-1.9A15.5 15.5 0 1 0 16 .5zm0 27.8c-2.4 0-4.7-.7-6.7-2l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.5 12.5 0 1 1 16 28.3zm6.9-9.4c-.4-.2-2.1-1-2.5-1.1-.2-.1-.6-.2-.8.2-.3.4-.9 1.1-1.1 1.3-.2.3-.4.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.1-2-2.5-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.8c.2.2 2.6 4 6.3 5.5.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.4-.3-.8-.5z"/>
 
         </svg>
 
     </a>
 
+
+    <!-- PROMOTIONAL POPUP -->
+    <div id="promoPopup" hidden>
+
+        <div class="promo-box">
+
+            <button type="button" id="closePopup" class="promo-close">
+                &times;
+            </button>
+
+            <img src="{% static 'restaurant/images/garden_dining_1.jpeg' %}"
+     alt="PM Madurai Pandiyan Hotel Garden Dining">
+
+            <div class="promo-content">
+
+                <h2>PM Madurai Pandiyan Hotel</h2>
+
+                <h3>A Feast of Authentic Taste!</h3>
+
+                <p>
+                    Enjoy Delicious Veg & Non-Veg Specials
+                    with Authentic Traditional Taste.
+                </p>
+
+                <a href="{% url 'gallery' %}" class="promo-button">
+                    Explore Our Food Gallery
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- POPUP JAVASCRIPT -->
+    <script>
+
+        const popup = document.getElementById("promoPopup");
+        const closeButton = document.getElementById("closePopup");
+
+        // Show popup after 3 seconds
+        setTimeout(function() {
+
+            popup.hidden = false;
+
+            popup.style.position = "fixed";
+            popup.style.top = "0";
+            popup.style.left = "0";
+            popup.style.width = "100%";
+            popup.style.height = "100%";
+            popup.style.background = "rgba(0, 0, 0, 0.80)";
+            popup.style.display = "flex";
+            popup.style.justifyContent = "center";
+            popup.style.alignItems = "center";
+            popup.style.zIndex = "999999";
+            popup.style.padding = "20px";
+            popup.style.boxSizing = "border-box";
+
+        }, 3000);
+
+
+        // Close popup
+        closeButton.addEventListener("click", function() {
+
+            popup.hidden = true;
+            popup.style.display = "none";
+
+        });
+
+    </script>
 
 </body>
 </html>

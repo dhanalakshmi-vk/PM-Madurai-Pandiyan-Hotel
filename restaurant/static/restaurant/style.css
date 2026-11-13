@@ -148,15 +148,6 @@ section p {
     color: #3b1717;
 }
 
-/* Mobile Design */
-
-@media (max-width: 600px) {
-    section h2 {
-        font-size: 27px;
-        gap: 10px;
-    }
-}
-
 /* ==================================
    HOME PAGE BANNER
 ================================== */
@@ -400,6 +391,7 @@ footer p {
 
     section h2 {
         font-size: 25px;
+        gap: 10px;
     }
 
     .category-card {
@@ -492,7 +484,7 @@ footer p {
     margin-bottom: 12px;
 }
 
-/* Dining Areas Mobile */
+/* Dining Areas Responsive */
 
 @media (max-width: 900px) {
     .dining-container {
@@ -513,9 +505,12 @@ footer p {
 .category-card .food-container.biryani-menu-bg {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    padding: 35px;
-    min-height: 350px;
+    gap: 18px 25px;
+    padding: 25px 35px;
+    height: 220px;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: start;
 
     background-image:
         linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
@@ -526,29 +521,7 @@ footer p {
     background-repeat: no-repeat;
 }
 
-
-/* ==================================
-   ROYAL DECORATIVE BIRYANI LABELS
-================================== */
-
-
-.category-card .food-container.biryani-menu-bg {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 25px;
-    padding: 25px 35px;
-
-    height: 220px;
-    min-height: 0;
-    overflow-y: auto;
-    align-content: start;
-
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Decorative Gold Label */
+/* Biryani Decorative Label */
 
 .category-card .biryani-menu-bg .food-card {
     position: relative;
@@ -558,7 +531,6 @@ footer p {
     min-height: 85px;
     margin: auto;
     padding: 15px 12px;
-
     background: #d99b22;
 
     clip-path: polygon(
@@ -574,8 +546,6 @@ footer p {
 
     filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
 }
-
-/* Inner Cream Background */
 
 .category-card .biryani-menu-bg .food-card::before {
     content: "";
@@ -602,8 +572,6 @@ footer p {
     );
 }
 
-/* Food Name */
-
 .category-card .biryani-menu-bg .food-card h3 {
     color: #681018;
     font-family: Georgia, serif;
@@ -612,38 +580,12 @@ footer p {
     margin-bottom: 5px;
 }
 
-/* Food Price */
-
 .category-card .biryani-menu-bg .food-card p {
     color: #681018;
     font-size: 23px;
     font-weight: bold;
     margin: 0;
 }
-
-
-@media (max-width: 600px) {
-    .category-card .food-container.biryani-menu-bg {
-        grid-template-columns: 1fr;
-        padding: 15px 12px;
-        gap: 15px;
-
-        height: 390px;
-        min-height: 0;
-        overflow-y: auto;
-    }
-
-    .category-card .biryani-menu-bg .food-card {
-        max-width: 280px;
-    }
-}
-
-
-
-
-
-
-
 
 /* ==================================
    TANDOORI MENU BACKGROUND
@@ -665,224 +607,8 @@ footer p {
     background-repeat: no-repeat;
 }
 
-/* TANDOORI DECORATIVE LABELS */
-
-.category-card .tandoori-menu-bg .food-card {
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    max-width: 280px;
-    min-height: 85px;
-    margin: auto;
-    padding: 15px 12px;
-
-    background: #d99b22;
-
-    clip-path: polygon(
-        5% 0, 95% 0,
-        98% 12%, 100% 25%,
-        98% 38%, 98% 62%,
-        100% 75%, 98% 88%,
-        95% 100%, 5% 100%,
-        2% 88%, 0 75%,
-        2% 62%, 2% 38%,
-        0 25%, 2% 12%
-    );
-
-    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
-}
-
-/* INNER CREAM LABEL */
-
-.category-card .tandoori-menu-bg .food-card::before {
-    content: "";
-    position: absolute;
-    inset: 4px;
-    z-index: -1;
-
-    background: linear-gradient(
-        135deg, #fff0bd, #fff9e8, #ffe5a0
-    );
-
-    clip-path: polygon(
-        5% 0, 95% 0,
-        98% 12%, 100% 25%,
-        98% 38%, 98% 62%,
-        100% 75%, 98% 88%,
-        95% 100%, 5% 100%,
-        2% 88%, 0 75%,
-        2% 62%, 2% 38%,
-        0 25%, 2% 12%
-    );
-}
-
-/* FOOD NAME */
-
-.category-card .tandoori-menu-bg .food-card h3 {
-    color: #681018;
-    font-family: Georgia, serif;
-    font-size: 21px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* FOOD PRICE */
-
-.category-card .tandoori-menu-bg .food-card p {
-    color: #681018;
-    font-size: 23px;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* MOBILE VIEW */
-
-@media (max-width: 600px) {
-    .category-card .food-container.tandoori-menu-bg {
-        grid-template-columns: 1fr;
-        padding: 20px 12px;
-        gap: 15px;
-    }
-
-    .category-card .tandoori-menu-bg .food-card {
-        max-width: 280px;
-    }
-}
-
-
-
-
-
-/* ==================================
-   NON VEG STARTERS BACKGROUND
-================================== */
-
-.category-card .food-container.nonveg-starters-bg {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 25px;
-    padding: 35px;
-    min-height: 350px;
-
-    background-image:
-        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-        url("/static/restaurant/images/nonveg_starters_bg.png");
-
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* DECORATIVE GOLD LABEL */
-
-.category-card .nonveg-starters-bg .food-card {
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    max-width: 280px;
-    min-height: 85px;
-    margin: auto;
-    padding: 15px 12px;
-
-    background: #d99b22;
-
-    clip-path: polygon(
-        5% 0, 95% 0,
-        98% 12%, 100% 25%,
-        98% 38%, 98% 62%,
-        100% 75%, 98% 88%,
-        95% 100%, 5% 100%,
-        2% 88%, 0 75%,
-        2% 62%, 2% 38%,
-        0 25%, 2% 12%
-    );
-
-    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
-}
-
-/* INNER CREAM LABEL */
-
-.category-card .nonveg-starters-bg .food-card::before {
-    content: "";
-    position: absolute;
-    inset: 4px;
-    z-index: -1;
-
-    background: linear-gradient(
-        135deg, #fff0bd, #fff9e8, #ffe5a0
-    );
-
-    clip-path: polygon(
-        5% 0, 95% 0,
-        98% 12%, 100% 25%,
-        98% 38%, 98% 62%,
-        100% 75%, 98% 88%,
-        95% 100%, 5% 100%,
-        2% 88%, 0 75%,
-        2% 62%, 2% 38%,
-        0 25%, 2% 12%
-    );
-}
-
-/* FOOD NAME */
-
-.category-card .nonveg-starters-bg .food-card h3 {
-    color: #681018;
-    font-family: Georgia, serif;
-    font-size: 21px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* FOOD PRICE */
-
-.category-card .nonveg-starters-bg .food-card p {
-    color: #681018;
-    font-size: 23px;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* MOBILE VIEW */
-
-@media (max-width: 600px) {
-    .category-card .food-container.nonveg-starters-bg {
-        grid-template-columns: 1fr;
-        padding: 20px 12px;
-        gap: 15px;
-    }
-
-    .category-card .nonveg-starters-bg .food-card {
-        max-width: 280px;
-    }
-}
-
-
-
-
-
-/* ==================================
-   VEG STARTERS BACKGROUND
-================================== */
-
-.category-card .food-container.veg-starters-bg {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 25px;
-    padding: 35px;
-    min-height: 350px;
-
-    background-image:
-        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-        url("/static/restaurant/images/veg_starters_bg.png");
-
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* DECORATIVE GOLD LABEL */
-
+.category-card .tandoori-menu-bg .food-card,
+.category-card .nonveg-starters-bg .food-card,
 .category-card .veg-starters-bg .food-card {
     position: relative;
     isolation: isolate;
@@ -891,7 +617,6 @@ footer p {
     min-height: 85px;
     margin: auto;
     padding: 15px 12px;
-
     background: #d99b22;
 
     clip-path: polygon(
@@ -908,8 +633,8 @@ footer p {
     filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
 }
 
-/* INNER CREAM LABEL */
-
+.category-card .tandoori-menu-bg .food-card::before,
+.category-card .nonveg-starters-bg .food-card::before,
 .category-card .veg-starters-bg .food-card::before {
     content: "";
     position: absolute;
@@ -932,8 +657,8 @@ footer p {
     );
 }
 
-/* FOOD NAME */
-
+.category-card .tandoori-menu-bg .food-card h3,
+.category-card .nonveg-starters-bg .food-card h3,
 .category-card .veg-starters-bg .food-card h3 {
     color: #681018;
     font-family: Georgia, serif;
@@ -942,8 +667,8 @@ footer p {
     margin-bottom: 5px;
 }
 
-/* FOOD PRICE */
-
+.category-card .tandoori-menu-bg .food-card p,
+.category-card .nonveg-starters-bg .food-card p,
 .category-card .veg-starters-bg .food-card p {
     color: #681018;
     font-size: 23px;
@@ -951,23 +676,44 @@ footer p {
     margin: 0;
 }
 
-/* MOBILE VIEW */
+/* Non Veg Starters Background */
 
-@media (max-width: 600px) {
-    .category-card .food-container.veg-starters-bg {
-        grid-template-columns: 1fr;
-        padding: 20px 12px;
-        gap: 15px;
-    }
+.category-card .food-container.nonveg-starters-bg {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+    padding: 35px;
+    min-height: 350px;
 
-    .category-card .veg-starters-bg .food-card {
-        max-width: 280px;
-    }
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/nonveg_starters_bg.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* Veg Starters Background */
+
+.category-card .food-container.veg-starters-bg {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+    padding: 35px;
+    min-height: 350px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("/static/restaurant/images/veg_starters_bg.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 /* ==================================
-   COMMON CATEGORY DESIGN
+   COMMON CATEGORY BACKGROUNDS
 ================================== */
 
 .category-card .food-container.omelette-menu-bg,
@@ -977,21 +723,15 @@ footer p {
 .category-card .food-container.chettinadu-menu-bg,
 .category-card .food-container.veg-rice-bg,
 .category-card .food-container.nonveg-rice-bg {
-
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px 25px;
     padding: 35px;
     min-height: 350px;
-
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* ==================================
-   INDIVIDUAL BACKGROUND IMAGES
-================================== */
 
 .category-card .food-container.omelette-menu-bg {
     background-image:
@@ -1035,9 +775,7 @@ footer p {
         url("/static/restaurant/images/nonveg_rice_bg.png");
 }
 
-/* ==================================
-   GOLD DECORATIVE FOOD LABEL
-================================== */
+/* Common Decorative Food Labels */
 
 .category-card .food-container.omelette-menu-bg .food-card,
 .category-card .food-container.tiffen-menu-bg .food-card,
@@ -1046,7 +784,6 @@ footer p {
 .category-card .food-container.chettinadu-menu-bg .food-card,
 .category-card .food-container.veg-rice-bg .food-card,
 .category-card .food-container.nonveg-rice-bg .food-card {
-
     position: relative;
     isolation: isolate;
     width: 100%;
@@ -1054,7 +791,6 @@ footer p {
     min-height: 85px;
     margin: auto;
     padding: 15px 12px;
-
     background: #d99b22;
 
     clip-path: polygon(
@@ -1071,8 +807,6 @@ footer p {
     filter: drop-shadow(0 4px 5px rgba(0,0,0,0.4));
 }
 
-/* INNER CREAM LABEL */
-
 .category-card .food-container.omelette-menu-bg .food-card::before,
 .category-card .food-container.tiffen-menu-bg .food-card::before,
 .category-card .food-container.bucket-biryani-bg .food-card::before,
@@ -1080,7 +814,6 @@ footer p {
 .category-card .food-container.chettinadu-menu-bg .food-card::before,
 .category-card .food-container.veg-rice-bg .food-card::before,
 .category-card .food-container.nonveg-rice-bg .food-card::before {
-
     content: "";
     position: absolute;
     inset: 4px;
@@ -1102,8 +835,6 @@ footer p {
     );
 }
 
-/* FOOD NAME */
-
 .category-card .food-container.omelette-menu-bg .food-card h3,
 .category-card .food-container.tiffen-menu-bg .food-card h3,
 .category-card .food-container.bucket-biryani-bg .food-card h3,
@@ -1111,15 +842,12 @@ footer p {
 .category-card .food-container.chettinadu-menu-bg .food-card h3,
 .category-card .food-container.veg-rice-bg .food-card h3,
 .category-card .food-container.nonveg-rice-bg .food-card h3 {
-
     color: #681018;
     font-family: Georgia, serif;
     font-size: 21px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-
-/* FOOD PRICE */
 
 .category-card .food-container.omelette-menu-bg .food-card p,
 .category-card .food-container.tiffen-menu-bg .food-card p,
@@ -1128,45 +856,31 @@ footer p {
 .category-card .food-container.chettinadu-menu-bg .food-card p,
 .category-card .food-container.veg-rice-bg .food-card p,
 .category-card .food-container.nonveg-rice-bg .food-card p {
-
     color: #681018;
     font-size: 23px;
     font-weight: bold;
     margin: 0;
 }
 
-/* MOBILE VIEW */
+/* ==================================
+   SCROLLABLE FOOD CATEGORIES
+================================== */
 
-@media (max-width: 600px) {
-
-    .category-card .food-container.omelette-menu-bg,
-    .category-card .food-container.tiffen-menu-bg,
-    .category-card .food-container.bucket-biryani-bg,
-    .category-card .food-container.parotta-menu-bg,
-    .category-card .food-container.chettinadu-menu-bg,
-    .category-card .food-container.veg-rice-bg,
-    .category-card .food-container.nonveg-rice-bg {
-
-        grid-template-columns: 1fr;
-        padding: 20px 12px;
-        gap: 15px;
-    }
-
-    .category-card .food-container.omelette-menu-bg .food-card,
-    .category-card .food-container.tiffen-menu-bg .food-card,
-    .category-card .food-container.bucket-biryani-bg .food-card,
-    .category-card .food-container.parotta-menu-bg .food-card,
-    .category-card .food-container.chettinadu-menu-bg .food-card,
-    .category-card .food-container.veg-rice-bg .food-card,
-    .category-card .food-container.nonveg-rice-bg .food-card {
-
-        max-width: 280px;
-    }
+.category-card .food-container.tandoori-menu-bg,
+.category-card .food-container.nonveg-starters-bg,
+.category-card .food-container.veg-starters-bg,
+.category-card .food-container.omelette-menu-bg,
+.category-card .food-container.tiffen-menu-bg,
+.category-card .food-container.bucket-biryani-bg,
+.category-card .food-container.parotta-menu-bg,
+.category-card .food-container.chettinadu-menu-bg,
+.category-card .food-container.veg-rice-bg,
+.category-card .food-container.nonveg-rice-bg {
+    height: 220px;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: start;
 }
-
-
-
-
 
 /* ==================================
    RESTAURANT LOCATION
@@ -1221,8 +935,6 @@ footer p {
     color: #25212a;
 }
 
-
-
 /* ==================================
    FLOATING WHATSAPP LOGO
 ================================== */
@@ -1231,80 +943,23 @@ footer p {
     position: fixed;
     right: 25px;
     bottom: 25px;
-
     width: 60px;
     height: 60px;
-
     background: #25D366;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-
     z-index: 9999;
     transition: 0.3s;
 }
-
 
 .whatsapp-icon {
     width: 38px;
     height: 38px;
     display: block;
 }
-
-@media (max-width: 600px) {
-    .whatsapp-icon {
-        width: 33px;
-        height: 33px;
-    }
-}
-
-
-
-
-/* ==================================
-   SCROLLABLE FOOD CATEGORIES
-================================== */
-
-.category-card .food-container.tandoori-menu-bg,
-.category-card .food-container.nonveg-starters-bg,
-.category-card .food-container.veg-starters-bg,
-.category-card .food-container.omelette-menu-bg,
-.category-card .food-container.tiffen-menu-bg,
-.category-card .food-container.bucket-biryani-bg,
-.category-card .food-container.parotta-menu-bg,
-.category-card .food-container.chettinadu-menu-bg,
-.category-card .food-container.veg-rice-bg,
-.category-card .food-container.nonveg-rice-bg {
-    height: 220px;
-    min-height: 0;
-    overflow-y: auto;
-    align-content: start;
-}
-
-/* MOBILE VIEW */
-
-@media (max-width: 600px) {
-    .category-card .food-container.tandoori-menu-bg,
-    .category-card .food-container.nonveg-starters-bg,
-    .category-card .food-container.veg-starters-bg,
-    .category-card .food-container.omelette-menu-bg,
-    .category-card .food-container.tiffen-menu-bg,
-    .category-card .food-container.bucket-biryani-bg,
-    .category-card .food-container.parotta-menu-bg,
-    .category-card .food-container.chettinadu-menu-bg,
-    .category-card .food-container.veg-rice-bg,
-    .category-card .food-container.nonveg-rice-bg {
-        height: 390px;
-        min-height: 0;
-        overflow-y: auto;
-    }
-}
-
-
 
 /* ==================================
    SELECTED FOOD CATEGORY DESIGN
@@ -1314,8 +969,6 @@ footer p {
     text-align: center;
     padding: 25px 15px;
 }
-
-/* BACK TO FOOD GALLERY BUTTON */
 
 .back-gallery-btn {
     display: inline-flex;
@@ -1340,10 +993,6 @@ footer p {
     color: #C9A45C;
     transform: translateX(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
-}
-
-.back-gallery-btn:hover {
-    background-color: #25212A;
 }
 
 .selected-food-grid {
@@ -1382,37 +1031,11 @@ footer p {
     margin: 0;
 }
 
-.gallery-item {
-    cursor: pointer;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    transition: 0.3s;
-}
-
-@media (max-width: 600px) {
-    .selected-food-grid {
-        grid-template-columns: 1fr;
-        padding: 15px;
-        gap: 12px;
-        margin: 15px;
-    }
-
-    .selected-food-card {
-        padding: 16px;
-    }
-}
-
-
-
-
-/* =================================
-   FOOD GALLERY - LAPTOP VIEW
-================================= */
+/* ==================================
+   FOOD GALLERY LAPTOP VIEW
+================================== */
 
 @media screen and (min-width: 1024px) {
-
     .gallery {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1430,27 +1053,13 @@ footer p {
         height: 220px;
         object-fit: cover;
     }
-
 }
 
-/* =================================
-   FOOD GALLERY - MOBILE VIEW
-================================= */
+/* ==================================
+   LAPTOP FOOD MENU HEIGHT
+================================== */
 
-@media screen and (max-width: 768px) {
-
-    .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-}
-
-
-
-/* LAPTOP - SHOW 6 FOOD ITEMS */
 @media screen and (min-width: 901px) {
-
     .category-card .food-container.biryani-menu-bg,
     .category-card .food-container.tandoori-menu-bg,
     .category-card .food-container.nonveg-starters-bg,
@@ -1464,19 +1073,7 @@ footer p {
     .category-card .food-container.nonveg-rice-bg {
         height: 370px;
     }
-
 }
-
-
-
-/* FOOD GALLERY - MOBILE SINGLE COLUMN */
-@media screen and (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr !important;
-    }
-}
-
-
 
 /* ==================================
    BULK ORDERS & PARTY CELEBRATIONS
@@ -1563,7 +1160,130 @@ footer p {
     color: #25212a;
 }
 
-/* TABLET VIEW */
+/* Event Images */
+
+.event-card:first-child .event-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.event-card:nth-child(2) .event-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.event-card:nth-child(3) .event-icon img {
+    width: 45px;
+    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ==================================
+   ABOUT US - DINING IMAGE HOVER
+================================== */
+
+.dining-section .dining-card img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.dining-section .dining-card img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 2;
+}
+
+/* ==================================
+   PROMOTIONAL POPUP
+================================== */
+
+#promoPopup {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#promoPopup[hidden] {
+    display: none !important;
+}
+
+#promoPopup:not([hidden]) {
+    display: flex !important;
+}
+
+.promo-box {
+    position: relative;
+    background: #fffaf2;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.promo-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.promo-content {
+    padding: 20px;
+}
+
+.promo-content h2 {
+    color: #681c35;
+    margin-bottom: 10px;
+}
+
+.promo-content h3 {
+    color: #c9a45c;
+    margin-bottom: 12px;
+}
+
+.promo-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: #681c35;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.promo-button {
+    display: inline-block;
+    background: #681c35;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+/* ==================================
+   MOBILE RESPONSIVE DESIGN
+================================== */
 
 @media (max-width: 900px) {
     .event-container {
@@ -1571,9 +1291,59 @@ footer p {
     }
 }
 
-/* MOBILE VIEW */
-
 @media (max-width: 600px) {
+
+    .dining-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card .food-container.biryani-menu-bg,
+    .category-card .food-container.tandoori-menu-bg,
+    .category-card .food-container.nonveg-starters-bg,
+    .category-card .food-container.veg-starters-bg,
+    .category-card .food-container.omelette-menu-bg,
+    .category-card .food-container.tiffen-menu-bg,
+    .category-card .food-container.bucket-biryani-bg,
+    .category-card .food-container.parotta-menu-bg,
+    .category-card .food-container.chettinadu-menu-bg,
+    .category-card .food-container.veg-rice-bg,
+    .category-card .food-container.nonveg-rice-bg {
+        grid-template-columns: 1fr;
+        padding: 15px 12px;
+        gap: 15px;
+        height: 390px;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .category-card .biryani-menu-bg .food-card,
+    .category-card .tandoori-menu-bg .food-card,
+    .category-card .nonveg-starters-bg .food-card,
+    .category-card .veg-starters-bg .food-card,
+    .category-card .food-container.omelette-menu-bg .food-card,
+    .category-card .food-container.tiffen-menu-bg .food-card,
+    .category-card .food-container.bucket-biryani-bg .food-card,
+    .category-card .food-container.parotta-menu-bg .food-card,
+    .category-card .food-container.chettinadu-menu-bg .food-card,
+    .category-card .food-container.veg-rice-bg .food-card,
+    .category-card .food-container.nonveg-rice-bg .food-card {
+        max-width: 280px;
+    }
+
+    .selected-food-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 12px;
+        margin: 15px;
+    }
+
+    .selected-food-card {
+        padding: 16px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr !important;
+    }
 
     .event-services {
         padding: 35px 15px;
@@ -1599,4 +1369,47 @@ footer p {
     .event-card p {
         min-height: auto;
     }
+
+    .whatsapp-icon {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+/* ==================================
+   MOBILE TOUCH IMAGE EFFECT
+================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /* ABOUT US DINING IMAGE TOUCH */
+
+    .dining-section .dining-card img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dining-section .dining-card img:active {
+        transform: scale(1.06);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* FOOD GALLERY TOUCH */
+
+    .gallery-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:active {
+        transform: scale(0.97);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .gallery-item img {
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:active img {
+        transform: scale(1.08);
+    }
+
 }
